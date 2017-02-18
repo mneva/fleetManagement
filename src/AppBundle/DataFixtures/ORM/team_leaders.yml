@@ -1,0 +1,4 @@
+AppBundle\Entity\team_leaders:
+    team_leaders{1..4}:
+        name: <name()>
+        cars: <numberBetween(1, 50)>

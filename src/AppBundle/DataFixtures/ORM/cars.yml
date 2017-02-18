@@ -1,0 +1,14 @@
+AppBundle\Entity\cars:
+    cars{1..20}:
+        licenceNumber: <numberBetween(100, 99999)>
+        licenceFrom: <date($format = 'Y-m-d', $max = 'now')>
+        licenceTo: <date($format = 'Y-m-d', $max = 'next year')>
+        teamMember: <name()>
+        teamLeader: '@team_leaders*'
+
+        #character{2..10}:
+         #       name: <characterName()>
+          #      realName: <name()>
+           #     highScore: <numberBetween(100, 99999)>
+            #    email: <email()>
+             #   tagLine: <sentence()>

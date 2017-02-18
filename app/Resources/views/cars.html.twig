@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Cars</h1>
+    {% for car in cars %}
+        {% if date(car.licenceTo) < date() %}
+            <div style="color: #880000">
+        {% else %}
+            <div>
+        {% endif %}
+            {{ car.id }}
+            {% for teamLeader in teamLeaders %}
+                {% if car.teamLeader == teamLeader.id %}
+                   {{ teamLeader.name }}
+                {%  endif %}
+            {% endfor %}
+            {{ car.teamLeader }}
+            {{ car.licenceFrom }}
+            {{ car.licenceTo }}
+        </div>
+    {% endfor %}
+{% endblock %}
